@@ -18,7 +18,7 @@ optional arguments:
 Automatic Path Cleaning
 -----------------------
 
-Just put this at the very end of your `.bash_profile` (or `.bashrc` or whatever). If you didn't clone this repo to `$HOME/path-cleaner/`, then replace`$HOME/path-cleaner/path_cleaner.py`with the path to the`path_cleaner.py` file in this repo:
+Just put this at the very end of your `.bash_profile` (or `.bashrc` or whatever). If you didn't clone this repo to `$HOME/path-cleaner/`, then replace`$HOME/path-cleaner/path_cleaner.py` with the path to the`path_cleaner.py` file in this repo:
 
 ```
 ### Cleaning up the path
