@@ -1,33 +1,36 @@
 Path Cleaner
 ============
 
-Just a simple utility for cleaning up one's `PATH`. Note that this preserves the order of the path directories, it just removes redundancies.
+Just a simple utility for cleaning up one's `PATH`. Note that this
+preserves the order of the path directories, it just removes
+redundancies.
 
 Usage
 -----
 
-```
-$ python path_cleaner.py --help
-usage: Clean up your PATH [-h] [--quiet]
+    $ python path_cleaner.py --help
+    usage: Clean up your PATH [-h] [--quiet] [--prune]
 
-optional arguments:
-  -h, --help   show this help message and exit
-  --quiet, -q  Squelch warnings.
-```
+    optional arguments:
+    -h, --help   show this help message and exit
+    --quiet, -q  Squelch warnings (disabled by default).
+    --prune, -p  Remove directories from your path that do not exist (disabled
+        by default).
 
 Automatic Path Cleaning
 -----------------------
 
-Just put this at the very end of your `.bash_profile` (or `.bashrc` or whatever). If you didn't clone this repo to `$HOME/path-cleaner/`, then replace`$HOME/path-cleaner/path_cleaner.py` with the path to the`path_cleaner.py` file in this repo:
+Just put this at the very end of your `.bash_profile` (or `.bashrc` or
+whatever). If you didn't clone this repo to `$HOME/path-cleaner/`, then
+replace`$HOME/path-cleaner/path_cleaner.py` with the path to
+the`path_cleaner.py` file in this repo:
 
-```
-### Cleaning up the path
+    ### Cleaning up the path
 
-# Location of path_cleaner.py
+    # Location of path_cleaner.py
 
-path_cleaner=$HOME/path-cleaner/path_cleaner.py
+    path_cleaner=$HOME/path-cleaner/path_cleaner.py
 
-if [ -e ${path_cleaner} ]; then
-    export PATH=`python ${path_cleaner} --quiet`
-fi
-```
+    if [ -e ${path_cleaner} ]; then
+        export PATH=`python ${path_cleaner} --quiet`
+    fi
