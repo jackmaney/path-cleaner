@@ -1,7 +1,10 @@
+from __future__ import print_function
+
 import argparse
 import os
 import sys
 from warnings import warn
+
 
 parser = argparse.ArgumentParser("Clean up your PATH")
 
@@ -47,4 +50,4 @@ for d in dirs:
     if d not in cleaned_dirs and add_dir_flag:
         cleaned_dirs.append(d)
 
-print sep.join(cleaned_dirs)
+print(sep.join(cleaned_dirs))

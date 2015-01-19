@@ -5,6 +5,8 @@ Just a simple utility for cleaning up one's `PATH`. Note that this
 preserves the order of the path directories, it just removes
 redundancies.
 
+This library is compatible with Python 2 and 3 (tested with 2.7.9 and 3.4.2).
+
 Usage
 -----
 
