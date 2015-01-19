@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Path-cleaner : Just a simple utility for cleaning up your PATH">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Path-cleaner</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/jackmaney/path-cleaner">View on GitHub</a>
+
+          <h1 id="project_title">Path-cleaner</h1>
+          <h2 id="project_tagline">Just a simple utility for cleaning up your PATH</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/jackmaney/path-cleaner/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/jackmaney/path-cleaner/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="path-cleaner" class="anchor" href="#path-cleaner" aria-hidden="true"><span class="octicon octicon-link"></span></a>Path Cleaner</h1>
+
+<p>Just a simple utility for cleaning up your <code>PATH</code>. Note that this preserves the order of the path directories, it just removes redundancies.</p>
+
+<p>This library is compatible with Python 2 and 3 (tested with 2.7.9 and 3.4.2).</p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<pre><code>$ python path_cleaner.py --help
+usage: Clean up your PATH [-h] [--quiet] [--prune]
+
+optional arguments:
+-h, --help   show this help message and exit
+--quiet, -q  Squelch warnings (disabled by default).
+--prune, -p  Remove directories from your path that do not exist (disabled
+    by default).
+</code></pre>
+
+<h2>
+<a id="automatic-path-cleaning" class="anchor" href="#automatic-path-cleaning" aria-hidden="true"><span class="octicon octicon-link"></span></a>Automatic Path Cleaning</h2>
+
+<p>Just put this at the very end of your <code>.bash_profile</code> (or <code>.bashrc</code> or whatever). If you didn't clone this repo to <code>$HOME/path-cleaner/</code>, then replace<code>$HOME/path-cleaner/path_cleaner.py</code> with the path to the<code>path_cleaner.py</code> file in this repo:</p>
+
+<pre><code>### Cleaning up the path
+
+# Location of path_cleaner.py
+
+path_cleaner=$HOME/path-cleaner/path_cleaner.py
+
+if [ -e ${path_cleaner} ]; then
+    export PATH=`python ${path_cleaner} --quiet`
+fi
+</code></pre>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Path-cleaner maintained by <a href="https://github.com/jackmaney">jackmaney</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
